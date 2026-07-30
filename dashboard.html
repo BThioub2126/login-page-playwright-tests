@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Demo App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .dashboard-card { text-align: center; }
+    .checkmark { font-size: 48px; margin-bottom: 10px; }
+    .logout-btn { margin-top: 20px; background: #f3f4f6; color: #374151; }
+    .logout-btn:hover { background: #e5e7eb; }
+  </style>
+</head>
+<body>
+  <main class="login-page">
+    <div class="login-card dashboard-card">
+      <div class="checkmark">✅</div>
+      <h1 data-testid="welcome-message">Welcome back!</h1>
+      <p class="subtitle">You have successfully logged in.</p>
+      <button class="submit-btn logout-btn" id="logout-btn" data-testid="logout-button">
+        Log Out
+      </button>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Demo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="login-page">
+    <div class="login-card">
+      <h1 class="logo">Demo<span>App</span></h1>
+      <p class="subtitle">Sign in to your account</p>
+
+      <form id="login-form" data-testid="login-form" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            data-testid="email-input"
+            placeholder="you@example.com"
+            autocomplete="username"
+          />
+          <span class="field-error" id="email-error" data-testid="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              data-testid="password-input"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              id="toggle-password"
+              data-testid="toggle-password"
+              aria-label="Show password"
+            >
+              👁
+            </button>
+          </div>
+          <span class="field-error" id="password-error" data-testid="password-error"></span>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember-me" data-testid="remember-checkbox" />
+            Remember me
+          </label>
+          <a href="#" class="forgot-link" data-testid="forgot-password-link">Forgot password?</a>
+        </div>
+
+        <div
+          class="banner-error"
+          id="form-error"
+          data-testid="form-error"
+          role="alert"
+          hidden
+        ></div>
+
+        <button type="submit" class="submit-btn" id="submit-btn" data-testid="submit-button">
+          <span class="btn-text">Log In</span>
+          <span class="spinner" data-testid="loading-spinner" hidden></span>
+        </button>
+      </form>
+
+      <p class="signup-text">
+        Don't have an account? <a href="#" data-testid="signup-link">Sign up</a>
+      </p>
+
+      <div class="hint-box" data-testid="demo-hint">
+        <strong>Demo credentials</strong>
+        <p>Email: <code>testuser@example.com</code></p>
+        <p>Password: <code>Password123</code></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
